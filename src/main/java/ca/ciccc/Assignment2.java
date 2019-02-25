@@ -22,6 +22,7 @@ public class Assignment2 {
      *
      */
     public String numberLoops(int n) {
+        // Todo: your code goes here
 
         return null;
     }
@@ -32,6 +33,7 @@ public class Assignment2 {
      * @return true if the number of 1s is greater than the number of 7s
      */
     public boolean countNumbers(int[] nums) {
+        // Todo: your code goes here
 
         return false;
     }
@@ -49,6 +51,7 @@ public class Assignment2 {
      * sumExcept13({1, 2, 13, 2, 1, 13} -> 4
      */
     public int sumExcept13(int[] nums) {
+        // Todo: your code goes here
 
         return 0;
     }
@@ -65,6 +68,7 @@ public class Assignment2 {
      * shiftArray({7}) -> {7}
      */
     public int[] shiftArray(int[] nums) {
+        // Todo: your code goes here
 
         return null;
     }
@@ -75,6 +79,7 @@ public class Assignment2 {
      * @return true if the array contains three increasing adjacent numbers, otherwise false.
      */
     public boolean tripleIncreasingOrder(int[] nums) {
+        // Todo: your code goes here
 
         return false;
     }
@@ -85,6 +90,7 @@ public class Assignment2 {
      * @return true if the array contains the same number of odds and even numbers, otherwise false.
      */
     public boolean evenOrOdd(int[] nums){
+        // Todo: your code goes here
 
         return false;
     }

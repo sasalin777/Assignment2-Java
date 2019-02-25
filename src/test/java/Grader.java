@@ -1,6 +1,15 @@
 import ca.ciccc.Assignment2;
 import org.junit.*;
 
+
+/**
+ * Grader for the assignment 2
+ * Your code need to pass all test cases.
+ *
+ * WARNING
+ * Just for the simplicity, each test method tests multiple test cases.
+ * There are better practices for writing unit test cases.
+ */
 public class Grader {
 
     private static Assignment2 assignment2;
@@ -58,10 +67,10 @@ public class Grader {
     public void testEvenOrOdds() {
         Assert.assertEquals(false, assignment2.evenOrOdd(new int[]{1, 4, 5, 6, 5}));
         Assert.assertEquals(false, assignment2.evenOrOdd(new int[]{1, 2, 3}));
-        Assert.assertEquals(true, assignment2.evenOrOdd(new int[]{1, 2, 4, 5}));
-        Assert.assertEquals(true, assignment2.evenOrOdd(new int[]{1, 6}));
-        Assert.assertEquals(true, assignment2.evenOrOdd(new int[]{1, 2, 4, 5, 7, 6, 5, 6, 7, 6}));
-        Assert.assertEquals(false, assignment2.evenOrOdd(new int[]{10, 9, 8, -100, -99, -98, 100}));
+        Assert.assertEquals( true, assignment2.evenOrOdd(new int[]{1, 2, 4, 5}));
+        Assert.assertEquals( true, assignment2.evenOrOdd(new int[]{1, 6}));
+        Assert.assertEquals( true, assignment2.evenOrOdd(new int[]{1, 2, 4, 5, 7, 6, 5, 6, 7, 6}));
+        Assert.assertEquals( false, assignment2.evenOrOdd(new int[]{10, 9, 8, -100, -99, -98, 100}));
     }
 
     @AfterClass

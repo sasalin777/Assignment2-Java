@@ -14,13 +14,14 @@
 3. Press next and finish
 
 ### Step 4: Finish your assignment
-1. `src/main/java/ca/ciccc/Assignment2.java`
-   - Source file
-2. `src/test/java/Grader.java`
-   - Test file
+1. `src/main/java/ca/ciccc/Assignment2.java` and `src/main/java/ca/ciccc/MagicSquare.java`
+   - Source files (Check Todo)
+2. `src/test/java/Grader.java` and `src/test/java/TestMagicSquare.java`
+   - Test files
 
 ### Step 5: Test locally
-1. Open `Gradle.java`, you can test your solution.
+1. Open `Gradle.java` and `TestMagicSquare.java`, you can test your code.
+2. Make sure your code passes all the test cases.
 
 ### Step 6: Submit
 1. Create a new branch locally. (`$ git checkout -b <<YourFirstName>>`)
