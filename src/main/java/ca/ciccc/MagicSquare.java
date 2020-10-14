@@ -22,6 +22,7 @@ public class MagicSquare {
      */
     public MagicSquare(int n) {
         this.n = n;
+        this.square = new Integer[n][n];
     }
 
     /**
@@ -52,7 +53,7 @@ public class MagicSquare {
     }
 
     /**
-     * Check if {@code square} is magic square or not.
+     * Check if {@code square} is magic square or not. (static helper method)
      * @param square 2-Dimensional array
      * @return {@code true} if {@code square} is magic, otherwise {@code false}
      *
