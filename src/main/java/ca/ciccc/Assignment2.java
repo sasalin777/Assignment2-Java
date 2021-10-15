@@ -1,6 +1,9 @@
 package ca.ciccc;
 
+
+
 /**
+ * //import com.sun.xml.internal.ws.api.client.SelectOptimalEncodingFeature;
  * This is the starter file for the Assignment 2
  *
  * @author Derrick Park
@@ -21,11 +24,32 @@ public class Assignment2 {
      * 333
      *
      */
-    public String numberLoops(int n) {
-        // Todo: your code goes here
 
-        return null;
+    public String numberLoops(int n) {
+
+        int i;
+        int j;
+        String result = "";
+
+        for (i =1;i<=n;i++)
+        {
+            for (j=n-i;j>0;j--)
+            {
+                result += ".";
+            }
+            for (int k=1;k<=i;k++){
+
+                result +=String.valueOf(i);}
+            if (i!=n) {result+="\n";}
+        }
+
+        return result;
     }
+
+
+
+
+
 
     /**
      * Given an array of integers, return true if the number of 1s is greater than the number of 7s
@@ -33,9 +57,29 @@ public class Assignment2 {
      * @return true if the number of 1s is greater than the number of 7s
      */
     public boolean countNumbers(int[] nums) {
-        // Todo: your code goes here
 
-        return false;
+        int n1=1;
+        int n2=7;
+        int k=0;
+        int q=0;
+
+        for(int i=0 ;i<=(nums.length-1) ;i++)
+        {
+            if(nums[i]==n1 )
+            {
+             k+=1;
+            }
+        }
+
+        for(int i=0 ;i<=(nums.length-1) ;i++)
+        {
+
+            if(nums[i]==n2 )
+            {
+                q+=1;
+            }
+        }
+        return k>q;
     }
 
     /**
@@ -51,9 +95,26 @@ public class Assignment2 {
      * sumExcept13({1, 2, 13, 2, 1, 13} -> 4
      */
     public int sumExcept13(int[] nums) {
-        // Todo: your code goes here
+        int sum=0;
+        int sum1=0;
 
-        return 0;
+        for(int i=0 ;i<=(nums.length-1) ;i++)
+        {
+            if (nums[i]!=13) { sum+=nums[i];}
+            else {
+
+                    if ((i+1) <= nums.length-1) {
+                        sum1+=nums[i+1];}
+
+
+
+            }
+
+
+        }
+        int finalsum = sum-sum1;
+
+        return finalsum;
     }
 
     /**
@@ -68,9 +129,25 @@ public class Assignment2 {
      * shiftArray({7}) -> {7}
      */
     public int[] shiftArray(int[] nums) {
-        // Todo: your code goes here
 
-        return null;
+        int[] newArrayadd = new int[nums.length + 1];
+        int[] newArrayremove = new int[nums.length];
+
+        for (int i = 0; i <= newArrayadd.length - 2; i++) {
+            if (i == 0) {
+                newArrayadd[0] = nums[0];
+                newArrayadd[newArrayadd.length-1] = nums[0];
+                //  System.out.println(newArrayadd[i])
+            } else {
+                newArrayadd[i] = nums[i];
+            }
+        }
+
+        for (int i = 0; i <= newArrayremove.length - 1; i++) {
+            newArrayremove[i] = newArrayadd[i+1];
+        }
+
+        return newArrayremove ;
     }
 
     /**
