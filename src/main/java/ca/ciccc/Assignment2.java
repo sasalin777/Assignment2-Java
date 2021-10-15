@@ -156,7 +156,16 @@ public class Assignment2 {
      * @return true if the array contains three increasing adjacent numbers, otherwise false.
      */
     public boolean tripleIncreasingOrder(int[] nums) {
-        // Todo: your code goes here
+
+        int counttimes=0;
+        for (int i = 0; i<=nums.length-2; i++)
+        {
+            if ((nums[i]-nums[i+1]) == -1)
+            {   counttimes+=1;
+            }
+        }
+        if (counttimes>=2){
+            return true;}
 
         return false;
     }
@@ -167,9 +176,18 @@ public class Assignment2 {
      * @return true if the array contains the same number of odds and even numbers, otherwise false.
      */
     public boolean evenOrOdd(int[] nums){
-        // Todo: your code goes here
+        int k1=0;
+        int q1=0;
 
-        return false;
+        for( int i=0 ;i<=(nums.length-1) ;i++) {
+            if (nums[i] % 2 == 0) {
+                k1 += 1;
+            } else {
+                q1 += 1;
+            }
+        }
+
+        return (k1==q1);
     }
 }
 

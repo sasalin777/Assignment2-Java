@@ -72,8 +72,50 @@ public class MagicSquare {
      */
     public static boolean isMagicSquare(Integer[][] square) {
         // TODO: You need to implement this method.
-        return false;
+        int[] newArrayrsumi = new int[square.length];
+        int[] newArrayrsumj =new int[square[0].length];
+        int row = square.length;
+        int coloums=square[0].length;
+        int counts2 = 0;
+        int counts3 = 0;
+
+        for (int i = 0; i <= (row - 1); i++) {
+            for (int j = 0; j <= (coloums - 1); j++) {
+                newArrayrsumi[i] += square[i][j];
+            }
+            // System.out.println(newArrayrsum[i]);
+
+        }
+        for (int k = 0; k <= (newArrayrsumi.length - 2); k++) {
+            if (newArrayrsumi[k] == newArrayrsumi[k + 1]) {
+                counts2 += 1;
+            }
+
+        }
+
+        for (int i = 0; i <= (row - 1); i++) {
+            for (int j = 0; j <= (coloums - 1); j++) {
+                newArrayrsumj[i] += square[j][i];
+            }
+            // System.out.println(newArrayrsum[i]);
+
+        }
+        for ( int k1 = 0; k1 <= (newArrayrsumj.length - 2); k1++) {
+            if (newArrayrsumj[k1] == newArrayrsumj[k1 + 1]) {
+                counts3 += 1;
+
+
+
+            }
+
+
+        }
+        boolean rowresult=(counts2 == newArrayrsumi.length - 1);
+        boolean colresult=(counts3 == newArrayrsumj.length - 1);
+        return ((rowresult == true) & (colresult) ==true) ;
     }
+
+
 
     /**
      * Check if {@code this.square} is magic square or not.
